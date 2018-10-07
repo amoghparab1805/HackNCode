@@ -1,0 +1,67 @@
+{% load staticfiles %}
+<!DOCTYPE html>
+<html>
+<head>
+    <title>SuicidePrevention</title>
+        <link rel="stylesheet" type="text/css" href="{% static 'front_page.css' %}">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Flamenco">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="row clearfix">
+                <a href="{% url 'MentalHealthAwareness:home' %}"><img src="{% static 'image/logolo.png' %}" class="logo"></a>
+                <ul class="main-nav " id="check-class">
+                    <li><a href="{% url 'MentalHealthAwareness:help' %}">HELPLINES</a></li>
+                    <li><a href="{% url 'MentalHealthAwareness:post_list' %}">STORIES</a></li>
+                    <li><a href="{% url 'MentalHealthAwareness:post_new' %}" class="top-menu">NEW STORY</a></li>
+                        <!--<li><a href="#">MOTIVATION</a></li>
+                        {% if user.is_authenticated %}
+                        <li><a href="logout">LOGOUT</a></li>
+                        {% else %}
+                        <li><a href="login">LOGIN</a></li>
+                        <li><a href="signup">SIGN-UP</a></li>
+                        {% endif %}-->
+                </ul>
+                <!--<a href="#" class="mobile-icon" onclick="slideshow()"><i class="fa fa-list"></i></a>-->
+            </div>
+        </nav>
+        
+        <div class="main-content-header">
+            <h1>Say No to Suicide<br>
+            Suicide is never the answer !</h1>
+            <a href="quotes" class="btn btn-full">MOTIVATIONAL QUOTES</a>
+            <a href="videos" class="btn btn-nav">VIDEOS</a>
+        </div>
+
+    </header>
+
+              <!--<script type="text/javascript">
+
+                           function slideshow(){
+
+                                         var x=document.getElementById('check-class');
+
+                                         if(x.style.display==="none"){
+
+                                                       x.style.display="block";
+
+ 
+
+                                         }
+
+                                         else{
+
+                                                       x.style.display="none";
+
+                                         }
+
+                           }
+
+              </script>
+
+-->
+
+</body>
+</html>
